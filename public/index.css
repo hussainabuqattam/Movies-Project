@@ -1,0 +1,35 @@
+.Nav_logo{color: chocolate !important;font-weight: 700;font-size: 30px !important;}
+
+.Nav_Serch .Button_Serch{border: 1px solid chocolate}
+
+.Nav_Serch .Button_Serch:hover{background-color: chocolate ;color: #fff }
+
+.Nav_Serch input:focus{border-color: chocolate}
+
+.Nav_Serch .form-control:focus{box-shadow: 0 0 0 .10rem chocolate}
+
+/*Card style*/
+
+.Card_Hover{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.Card_Hover .text_hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Paginations_style*/
+
+.Paginations_style{display: flex;justify-content: center;margin-top: 100px;}
