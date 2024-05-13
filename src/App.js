@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Navbars } from './Components/Navbars';
 import { MovieCard } from './Components/MovieCard';
 import { Paginations } from './Components/Paginations';
+import AxiosFetch  from './CustomHooks/AxiosFetch';
+
 
 function App() {
   return (

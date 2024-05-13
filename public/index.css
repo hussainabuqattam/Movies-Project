@@ -8,27 +8,44 @@
 
 .Nav_Serch .form-control:focus{box-shadow: 0 0 0 .10rem chocolate}
 
+/*spiner*/
+
+.spiner_style{display: flex;justify-content: center;margin-top: 250px;}
+
 /*Card style*/
+.Card_overlay{position: relative; margin-top: 30px;}
 
-.Card_Hover{
-    position: relative;
-    text-align: center;
-    color: white;
-    margin-top: 50px;
-}
+.Card_overlay .img_overlay{width: 100%;height: 100%;}
 
-.Card_Hover .text_hover{
+
+.text_overlay{
+    visibility: none;
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    background-color: rgba(108, 108, 108, 0.496);
+    opacity: 0;
 }
+
+.Card_overlay .text_overlay .Overlay_desc{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.text_overlay:hover{opacity: 1;}
+
+.img_overlay img{width: 100%;height: 400px;}
 
 /*Paginations_style*/
 
