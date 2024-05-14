@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Movie_logo from '../Image/Movie_logo.png'
-import { Row, Navbar, Container, Col, Button, Form } from 'react-bootstrap'
+import { Row, Navbar, Container, Col, Button, Form, Spinner } from 'react-bootstrap'
 
-export const Navbars = () => {
+export const Navbars = ({serchapi}) => {
+const SerchInput = (e) =>{
+  serchapi(e);
+}
   return (
     <div>
       <Navbar className="bg-body-tertiary">
@@ -23,6 +26,7 @@ export const Navbars = () => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(e) => SerchInput(e.target.value)}
             />
             <Button variant="outline" className='Button_Serch'>Search</Button>
           </Form>

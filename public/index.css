@@ -49,4 +49,4 @@
 
 /*Paginations_style*/
 
-.Paginations_style{display: flex;justify-content: center;margin-top: 100px;}
+.Paginations_cover .page-link.active, .active>.page-link {background-color:chocolate !important;color:#fff !important;}

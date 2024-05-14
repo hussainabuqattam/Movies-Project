@@ -1,16 +1,33 @@
 import React from 'react'
-import { Pagination } from 'react-bootstrap'
+import ReactPaginate from 'react-paginate';
 
-export const Paginations = () => {
+
+export const Paginations = ({page_movie, page}) => {
+  const handlePageClick = (data)=>{
+    page_movie(data.selected + 1)
+  }
+  const pageCount = page;
   return (
-    <div className='Paginations_style'>
-     <Pagination>
-        <Pagination.Prev />
-        <Pagination.Item>{1}</Pagination.Item>
-        <Pagination.Ellipsis />
-        <Pagination.Item>{20}</Pagination.Item>
-        <Pagination.Next />
-     </Pagination>
-    </div>
+    <div className='Paginations_cover'>
+         <ReactPaginate
+            breakLabel="..."
+            nextLabel="Next"
+            onPageChange={handlePageClick}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={2}
+            pageCount={pageCount}
+            previousLabel="Previous"
+            containerClassName={"pagination justify-content-center p-3"}
+            pageClassName={"page-item"}
+            pageLinkClassName={"page-link"}
+            previousClassName={"page-item"}
+            nextClassName={"page-item"}
+            previousLinkClassName={"page-link"}
+            nextLinkClassName={"page-link"}
+            breakClassName={"page-item"}
+            breakLinkClassName={"page-link"}
+            activeClassName={"active"}
+        />
+      </div>
   )
 }
