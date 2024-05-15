@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Navbars } from './Components/Navbars';
 import { MovieCard } from './Components/MovieCard';
-import { Paginations } from './Components/Paginations';
 import axios from 'axios';
+import { BrowserRouter, Routes, Route, useLocation, useParams, } from 'react-router-dom'
+import { MovieDetaiils } from './Components/MovieDetaiils';
+
 function App() {
   const [res,setres] = useState()
   const [page,setpage] = useState()
@@ -31,11 +33,15 @@ function App() {
     useEffect(()=>{movieapi()},[])
   return (
    <div>
-        <Navbars serchapi={search}/>
-        <Container>
-          <MovieCard data={res}/>
-        </Container>
-        <Paginations page_movie={page_movie} page={page} />
+      <Navbars serchapi={search}/>
+      <Container>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MovieCard data={res} page_movie={page_movie} page={page} />}/>
+                <Route path="/movie/:id" element={<MovieDetaiils />} />
+            </Routes>
+        </BrowserRouter>
+      </Container>      
    </div>
 );
 }

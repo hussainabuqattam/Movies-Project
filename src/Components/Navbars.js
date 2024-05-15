@@ -10,7 +10,7 @@ const SerchInput = (e) =>{
     <div>
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home" className='Nav_logo'>
+          <Navbar.Brand href="/" className='Nav_logo'>
             <img
               alt=""
               src={Movie_logo}

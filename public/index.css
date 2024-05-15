@@ -50,3 +50,52 @@
 /*Paginations_style*/
 
 .Paginations_cover .page-link.active, .active>.page-link {background-color:chocolate !important;color:#fff !important;}
+
+/*Details*/
+.movie-detail-container {
+    padding-top: 70px !important;
+  }
+  
+  .card-details {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .img-movie {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-text-details {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .card-story {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-text-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card-text-story {
+    font-size: 16px;
+  }
+  
+  .custom-btn {
+    background-color: #b45b35 !important;
+    border: none;
+  }
+  
+  .custom-btn:hover {
+    background-color: #944a28 !important;
+  }
+  
