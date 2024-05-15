@@ -18,7 +18,7 @@ const SerchInput = (e) =>{
               height="40"
               className="d-inline-block align-top"
             />
-            Movies Project
+            Movie Scope
           </Navbar.Brand>
           <Form className="d-flex Nav_Serch">
             <Form.Control
