@@ -1,14 +1,50 @@
 
-### Explanation:
+# MovieScope
 
-1. **Project Name**: "MovieScope" is a catchy and descriptive name for your movie application.
-2. **README Structure**:
-   - **Features**: Highlight the main features of your app.
-   - **Demo**: Provide a link to a live demo (if available).
-   - **Installation**: Detailed steps to set up the project locally.
-   - **Usage**: Basic instructions on how to use the app.
-   - **Contributing**: Guidelines for contributing to the project.
-   - **License**: Information about the project license.
-   - **Acknowledgements**: Credits to libraries and services used.
+MovieScope is a React-based web application that allows users to search for movies, view details about them, and get recommendations using the TMDB (The Movie Database) API.
 
-This README provides a comprehensive guide to understanding, setting up, and contributing to your project, making it accessible to other developers and users.
+## Setup
+
+This project is designed to be run locally. You will need to have Node.js and npm installed on your machine.
+
+First, clone this repository:
+
+```sh
+git clone https://github.com/hussainabuqattam/Movies-Project.git
+cd Movies-Project
+```
+Next, install the required dependencies:
+```sh
+npm install
+
+```
+### Running the Application
+```sh
+npm start
+```
+The app will be available at http://localhost:3000.
+
+## Usage
+
+* Navigate to the homepage.
+* Use the search bar to find your favorite movies.
+* Click on a movie to see detailed information.
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgements
+
+* React
+* React Bootstrap
+* TMDB API
+* Font Awesome
+
+## 
+
+Made with ❤️ by Hussain Abu Qattam
+
