@@ -40,6 +40,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Acknowledgements
 
 * React
+* Redux
 * React Bootstrap
 * TMDB API
 * Font Awesome
