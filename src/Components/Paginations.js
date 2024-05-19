@@ -1,12 +1,18 @@
-import React from 'react'
 import ReactPaginate from 'react-paginate';
+import { useDispatch, useSelector } from 'react-redux';
+import { getMovies } from '../Redux/Action/MoviesAction';
+import { page_type } from '../Redux/Type/type';
 
 
-export const Paginations = ({page_movie, page}) => {
+export const Paginations = () => {
+  // the number of page using all movies api url
+  const page_all_movies = useSelector(state => state.pages)
+  const dispatch = useDispatch()
   const handlePageClick = (data)=>{
-    page_movie(data.selected + 1)
+      // send number page to url api using dispatch 
+      dispatch(getMovies(page_type, '', data.selected + 1))
   }
-  const pageCount = page;
+  const pageCount = page_all_movies;
   return (
     <div className='Paginations_cover'>
          <ReactPaginate

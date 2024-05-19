@@ -1,9 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { Col, Row, Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { Paginations } from './Paginations';
+import { useDispatch, useSelector } from 'react-redux';
+import { AllMovies_type } from '../Redux/Type/type';
+import { getMovies } from '../Redux/Action/MoviesAction';
 
-export const MovieCard = ({data,page_movie,page}) => {
+export const MovieCard = () => {
+  const [data, setdata] = useState();
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    // all movies api url data using dispatch 
+    dispatch(getMovies(AllMovies_type))
+  },[])
+  const data_movies = useSelector(state => state.movies)
+  useEffect(()=>{
+    // save movies data in usestate and useeffect work when data changed 
+    setdata(data_movies)
+  },[data_movies])
+
+   // if the data empity 
    if (!data) {
       return <div className='spiner_style'><Spinner animation="border"  variant="secondary" /></div>
     }
@@ -31,7 +47,7 @@ export const MovieCard = ({data,page_movie,page}) => {
        ) : (
          <h1>No Data</h1>
        )}
-         <Paginations page_movie={page_movie} page={page} />
+         <Paginations/>
      </Row>
    );
  };

@@ -1,11 +1,22 @@
 import React, { useEffect } from 'react'
 import Movie_logo from '../Image/Movie_logo.png'
 import { Row, Navbar, Container, Col, Button, Form, Spinner } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { AllMovies_type, search_type } from '../Redux/Type/type'
+import { getMovies } from '../Redux/Action/MoviesAction'
 
-export const Navbars = ({serchapi}) => {
-const SerchInput = (e) =>{
-  serchapi(e);
-}
+export const Navbars = () => {
+  const dispatch = useDispatch()
+     //to search in api
+  const search = async (word) => {
+    if (word === "") {
+      // all movies url api 
+      dispatch(getMovies(AllMovies_type))
+    } else {
+      // serch movies url api 
+      dispatch(getMovies(search_type, word, ''))
+    }
+  }
   return (
     <div>
       <Navbar className="bg-body-tertiary">
@@ -26,7 +37,7 @@ const SerchInput = (e) =>{
               placeholder="Search"
               className="me-2"
               aria-label="Search"
-              onChange={(e) => SerchInput(e.target.value)}
+              onChange={(e) => search(e.target.value)}
             />
             <Button variant="outline" className='Button_Serch'>Search</Button>
           </Form>
